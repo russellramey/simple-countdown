@@ -1,0 +1,54 @@
+<style>
+#countdown{
+    text-align: center;
+    font-size: 60px;
+    line-height: 1.8em;
+    overflow: hidden;
+}
+#countdown span{
+    font-size: 64px;
+    font-weight: bold;
+}
+#countdown > div{
+    padding: 20px;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    width: 24%;
+    border:1px solid #e4e4e4;
+    border-radius: 5px;
+    margin-right: .5%;
+    margin-left: .5%;
+}
+.smalltext{
+    font-size: 16px;
+    line-height: 1em;
+    margin-top: -15px;
+    font-weight: normal;
+}
+</style>
+
+<div id="countdown">
+    <div id="days">
+        <span id="daysTxt"></span>
+        <div class="smalltext">Days</div>
+    </div>
+
+    <div id="hours">
+        <span id="hoursTxt"></span>
+        <div class="smalltext">Hours</div>
+    </div>
+
+    <div id="minutes">
+        <span id="minsTxt"></span>
+        <div class="smalltext">Minutes</div>
+    </div>
+
+    <div id="seconds">
+        <span id="secsTxt"></span>
+        <div class="smalltext">Seconds</div>
+    </div>
+</div>
+</div>
+
+<script src="simple.countdown.js"></script>
