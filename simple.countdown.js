@@ -39,7 +39,9 @@ function simple_countdown() {
 		document.getElementById(elmSecs).innerHTML = seconds;
 
 		// Set timer speed
-		var timer = setTimeout('simple_countdown()',1000);
+		var timer = setTimeout(function(){
+            simple_countdown();
+        }, 1000);
 	}
 }
 
