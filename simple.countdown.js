@@ -32,6 +32,20 @@ function simple_countdown() {
 	        minutes %= 60;
 	        seconds %= 60;
 
+	    // Add leading 0 if single digit
+        if(days.toString().length == 1) {
+            days = "0" + days;
+        }
+        if(minutes.toString().length == 1) {
+            minutes = "0" + minutes;
+        }
+        if(hours.toString().length == 1) {
+            hours = "0" + hours;
+        }
+        if(seconds.toString().length == 1) {
+            seconds = "0" + seconds;
+        }
+
 	    // Print html
 		document.getElementById(elmDays).innerHTML = days;
 		document.getElementById(elmHours).innerHTML = hours;
