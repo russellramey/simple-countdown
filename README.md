@@ -15,8 +15,8 @@ Simple countdown timer, mainly used for an event or countdown to day done in pla
 2) Create a container for each digit (example: days). Create one for each digit, days, hours, minutes, seconds:
 ```html
 <div id="days">
-    <span id="daysTxt"></span>
-    <div class="smalltext">Days</div>
+    <span id="daysVal"></span>
+    <div class="countdown-label">Days</div>
 </div>
 ```
 
