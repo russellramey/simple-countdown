@@ -1,14 +1,16 @@
 // Simple Countdown
-function simple_countdown() {
+function simple_countdown(datetime) {
 	// Set target date
-	var deadline = new Date("January 1, 2017");
+	var deadline = new Date(datetime);
+
+	// Get current date
 	var now = new Date();
 
 	// Set element id's
-	var elmDays = "daysTxt",
-	    elmHours = "hoursTxt",
-	    elmMins = "minsTxt",
-	    elmSecs = "secsTxt";
+	var elmDays = "daysVal",
+	    elmHours = "hoursVal",
+	    elmMins = "minsVal",
+	    elmSecs = "secsVal";
 
 	// Set time difference
 	var timeDiff = deadline.getTime() - now.getTime();
@@ -54,10 +56,10 @@ function simple_countdown() {
 
 		// Set timer speed
 		var timer = setTimeout(function(){
-            simple_countdown();
+            simple_countdown(datetime);
         }, 1000);
 	}
 }
 
 // Run function
-simple_countdown();
+simple_countdown("January 1, 2018");

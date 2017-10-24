@@ -20,7 +20,7 @@
     margin-right: .5%;
     margin-left: .5%;
 }
-.smalltext{
+.countdown-label{
     font-size: 16px;
     line-height: 1em;
     margin-top: -15px;
@@ -28,25 +28,25 @@
 }
 </style>
 
-<div id="countdown">
+<div id="countdown" data-deadline="January 1, 2019 00:00:00">
     <div id="days">
-        <span id="daysTxt"></span>
-        <div class="smalltext">Days</div>
+        <span id="daysVal"></span>
+        <div class="countdown-label">Days</div>
     </div>
 
     <div id="hours">
-        <span id="hoursTxt"></span>
-        <div class="smalltext">Hours</div>
+        <span id="hoursVal"></span>
+        <div class="countdown-label">Hours</div>
     </div>
 
     <div id="minutes">
-        <span id="minsTxt"></span>
-        <div class="smalltext">Minutes</div>
+        <span id="minsVal"></span>
+        <div class="countdown-label">Minutes</div>
     </div>
 
     <div id="seconds">
-        <span id="secsTxt"></span>
-        <div class="smalltext">Seconds</div>
+        <span id="secsVal"></span>
+        <div class="countdown-label">Seconds</div>
     </div>
 </div>
 </div>
