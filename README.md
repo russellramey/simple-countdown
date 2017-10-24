@@ -24,7 +24,7 @@ Simple countdown timer, mainly used for an event or countdown to day done in pla
 
 1) Run the function:
 ```javascript
-simple_countdown(Month Day, Year 00:00:00);
+simple_countdown("Month Day, Year 00:00:00");
 ```
 
 ## Demo
