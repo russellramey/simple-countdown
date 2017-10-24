@@ -22,14 +22,9 @@ Simple countdown timer, mainly used for an event or countdown to day done in pla
 
 # JS
 
-1) Set the target date for countdown:
+1) Run the function:
 ```javascript
-var deadline = new Date("January 1, 2017");
-```
-
-2) Run the function:
-```javascript
-simple_countdown();
+simple_countdown(Month Day, Year 00:00:00);
 ```
 
 ## Demo
