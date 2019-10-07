@@ -26,6 +26,10 @@ Simple countdown timer, mainly used for an event or countdown to day done in pla
 ```javascript
 simple_countdown("Month Day, Year 00:00:00");
 ```
+You can also define a optional background color
+```javascript
+simple_countdown("Month Day, Year 00:00:00", "#AAAAAA");
+```
 
 ## Demo
 See the basic functionality [here](http://russellramey.me/examples/simple-countdown).
