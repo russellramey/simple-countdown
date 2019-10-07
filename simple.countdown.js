@@ -1,5 +1,5 @@
 // Simple Countdown
-function simple_countdown(datetime) {
+function simple_countdown(datetime, color = null) {
 	// Set target date
 	var deadline = new Date(datetime);
 
@@ -8,9 +8,17 @@ function simple_countdown(datetime) {
 
 	// Set element id's
 	var elmDays = "daysVal",
-	    elmHours = "hoursVal",
-	    elmMins = "minsVal",
-	    elmSecs = "secsVal";
+		elmHours = "hoursVal",
+		elmMins = "minsVal",
+		elmSecs = "secsVal";
+
+	//set color if color is set
+	if (color != null) {
+		document.getElementById(elmDays).parentElement.style.backgroundColor = color;
+		document.getElementById(elmHours).parentElement.style.backgroundColor = color;
+		document.getElementById(elmMins).parentElement.style.backgroundColor = color;
+		document.getElementById(elmSecs).parentElement.style.backgroundColor = color;
+	}
 
 	// Set time difference
 	var timeDiff = deadline.getTime() - now.getTime();
@@ -22,44 +30,44 @@ function simple_countdown(datetime) {
 		document.getElementById(elmMins).innerHTML = 0;
 		document.getElementById(elmSecs).innerHTML = 0;
 
-    } else {
+	} else {
 
-    	// Calculate time digits
+		// Calculate time digits
 		var seconds = Math.floor(timeDiff / 1000),
 			minutes = Math.floor(seconds / 60),
 			hours = Math.floor(minutes / 60),
 			days = Math.floor(hours / 24);
 
-			hours %= 24;
-	        minutes %= 60;
-	        seconds %= 60;
+		hours %= 24;
+		minutes %= 60;
+		seconds %= 60;
 
-	    // Add leading 0 if single digit
-        if(days.toString().length == 1) {
-            days = "0" + days;
-        }
-        if(minutes.toString().length == 1) {
-            minutes = "0" + minutes;
-        }
-        if(hours.toString().length == 1) {
-            hours = "0" + hours;
-        }
-        if(seconds.toString().length == 1) {
-            seconds = "0" + seconds;
-        }
+		// Add leading 0 if single digit
+		if (days.toString().length == 1) {
+			days = "0" + days;
+		}
+		if (minutes.toString().length == 1) {
+			minutes = "0" + minutes;
+		}
+		if (hours.toString().length == 1) {
+			hours = "0" + hours;
+		}
+		if (seconds.toString().length == 1) {
+			seconds = "0" + seconds;
+		}
 
-	    // Print html
+		// Print html
 		document.getElementById(elmDays).innerHTML = days;
 		document.getElementById(elmHours).innerHTML = hours;
 		document.getElementById(elmMins).innerHTML = minutes;
 		document.getElementById(elmSecs).innerHTML = seconds;
 
 		// Set timer speed
-		var timer = setTimeout(function(){
-            simple_countdown(datetime);
-        }, 1000);
+		var timer = setTimeout(function () {
+			simple_countdown(datetime);
+		}, 1000);
 	}
 }
 
 // Run function
-simple_countdown("January 1, 2018");
+simple_countdown("January 1, 2020", "#AAAAAA");
